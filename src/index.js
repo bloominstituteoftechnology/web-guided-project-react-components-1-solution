@@ -1,7 +1,6 @@
 // 👉 Importing React libs from node_modules folder (see package.json)
 import React from 'react'                 // to make React components
 import { render } from 'react-dom'        // to append a React tree of components to the DOM
-import { string, bool } from 'prop-types' // to perform validation of props (optional)
 
 // 👉 Importing a React component from another file
 import RockPaperScissors from './components/RockPaperScissors'
