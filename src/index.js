@@ -6,9 +6,6 @@ import { render } from 'react-dom' // to append a React tree of components to th
 import RockPaperScissors from './components/RockPaperScissors'
 import FamilyTree from './components/FamilyTree'
 
-// 👉 Importing a React component from node_modules
-import Bulb from '@ladrillo/lightbulb'
-
 
 /*
 💥💥💥 A- Mounting a React element to the DOM (often only once per app) 💥💥💥
