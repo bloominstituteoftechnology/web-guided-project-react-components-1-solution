@@ -1,6 +1,5 @@
 // We need the state hook
 import React, { useState } from 'react'
-import { string } from 'prop-types'
 import Bulb from '@ladrillo/lightbulb'
 
 // These constants could live in another module
@@ -100,10 +99,6 @@ export default function RockPaperScissors({ player }) {
       </div>
     </div>
   )
-}
-
-RockPaperScissors.propTypes = { // OPTIONAL (but nice)
-  player: string.isRequired,
 }
 
 // STRETCH- 👉👉👉 ADD A RESTART BUTTON, ANYTHING YOU CAN IMAGINE, BRING OTHER COMPONENTS...

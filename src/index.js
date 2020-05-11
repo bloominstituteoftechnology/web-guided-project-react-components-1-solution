@@ -59,11 +59,6 @@ function Greet(props) { // takes data => returns element
     <div>Hello, {name}. I am {emphasis && 'SO'} {hate ? 'angry' : 'happy'} to see you.</div>
   )
 }
-Greet.propTypes = { // validation (optional but recommended)
-  name: string,
-  emphasis: bool,
-  hate: bool,
-}
 
 
 /*
