@@ -11,29 +11,20 @@ import Bulb from '@ladrillo/lightbulb'
 
 
 /*
-💥💥💥 A- Mounting a React element to the DOM (only once per app) 💥💥💥
-💥💥💥 A- Mounting a React element to the DOM (only once per app) 💥💥💥
-💥💥💥 A- Mounting a React element to the DOM (only once per app) 💥💥💥
+💥💥💥 A- Mounting a React element to the DOM (often only once per app) 💥💥💥
+💥💥💥 A- Mounting a React element to the DOM (often only once per app) 💥💥💥
+💥💥💥 A- Mounting a React element to the DOM (often only once per app) 💥💥💥
 */
-const id = 'helloWorld'
-const className = 'hello-world'
-const content = 'Hello, World!!!!!!!'
-const altContent = true ? 'HELLO, WORLD' : 'you will not see me'
-const size = 250
-// render(
-//   // 👉 1st ARG - React element (or React component "invoked"):
-//   // <div className={className} id={id}>{altContent + 5}</div>,
-//   // <div>
-//   //   <Bulb on={true} color='red' size='150' />
-//   //   <Bulb on={false} color='blue' size={size} />
-//   //   <Bulb on={true} color='pink' size={200} />
-//   // </div>,
-//   // <Greet name='Ian' emphasis hate />,
-//   <RockPaperScissors player='Ian' />,
-//   // 👉 2nd ARG - DOM element to append to:
-//   document.querySelector('#rockPaperScissors')
-// )
 
+// EXERCISE: render the RockPaperScissors to div#rockPaperScissors
+render(
+  // 👉 1st ARG - React element (or React component "invoked"):
+  <RockPaperScissors player='Ian' />,
+  // 👉 2nd ARG - DOM element to append to:
+  document.querySelector('#rockPaperScissors')
+)
+
+// EXERCISE: render the FamilyTree to div#familyTree
 render(
   <FamilyTree />,
   document.querySelector('#familyTree')
@@ -56,12 +47,12 @@ render(
   - We can validate the props
 */
 function Greet(props) { // takes data => returns element
-  const { name, emphasis, hate } = props
-  // if (hate) {
-  //   return 'I HATE YOU ' + name
-  // }
+  const { personToGreet, emphasis } = props
+
   return (
-    <div>Hello, {name}. I am {emphasis && 'SO'} {hate ? 'angry' : 'happy'} to see you.</div>
+    <div className='container'>
+      Hello, {personToGreet}. I am {emphasis && 'SO '}happy to see you.
+    </div>
   )
 }
 
@@ -76,7 +67,13 @@ function Greet(props) { // takes data => returns element
   - Instead of passing args with parens, we pass them with attribute-like syntax
   - Don't forget all tags need to close correctly
 
-  <Greet name='Ian' emphasis />              // props are { name: 'Ian', emphasis: true }
-  <Greet name='Michael' emphasis={false} />  // props are { name: 'Michael', emphasis: false }
-  <Greet name='Sarah' />                     // props are { name: 'Sarah' }
+  <Greet personToGreet='Ian' emphasis />              // props are { personToGreet: 'Ian', emphasis: true }
+  <Greet personToGreet='Michael' emphasis={false} />  // props are { personToGreet: 'Michael', emphasis: false }
+  <Greet personToGreet='Sarah' />                     // props are { personToGreet: 'Sarah' }
 */
+
+// EXERCISE: render the Greet to div#greet passing the correct props
+render(
+  <Greet personToGreet='Petar' />,
+  document.querySelector('#greet')
+)

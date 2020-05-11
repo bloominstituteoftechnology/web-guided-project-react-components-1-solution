@@ -75,7 +75,7 @@ export default function RockPaperScissors({ player }) {
       setMessage(`You: ${player}, They: ${computer}. You Win!`)
     } /* 5F- it's a TIE */ else {
       // - Update the message
-      setMessage(`You: ${player}, They: ${computer}. its a tie`)
+      setMessage(`You: ${player}, They: ${computer}. Its a tie`)
     }
   }
 
