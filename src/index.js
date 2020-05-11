@@ -1,9 +1,10 @@
 // 👉 Importing React libs from node_modules folder (see package.json)
-import React from 'react'                 // to make React components
-import { render } from 'react-dom'        // to append a React tree of components to the DOM
+import React from 'react'          // to make React components
+import { render } from 'react-dom' // to append a React tree of components to the DOM
 
 // 👉 Importing a React component from another file
 import RockPaperScissors from './components/RockPaperScissors'
+import FamilyTree from './components/FamilyTree'
 
 // 👉 Importing a React component from node_modules
 import Bulb from '@ladrillo/lightbulb'
@@ -19,18 +20,23 @@ const className = 'hello-world'
 const content = 'Hello, World!!!!!!!'
 const altContent = true ? 'HELLO, WORLD' : 'you will not see me'
 const size = 250
+// render(
+//   // 👉 1st ARG - React element (or React component "invoked"):
+//   // <div className={className} id={id}>{altContent + 5}</div>,
+//   // <div>
+//   //   <Bulb on={true} color='red' size='150' />
+//   //   <Bulb on={false} color='blue' size={size} />
+//   //   <Bulb on={true} color='pink' size={200} />
+//   // </div>,
+//   // <Greet name='Ian' emphasis hate />,
+//   <RockPaperScissors player='Ian' />,
+//   // 👉 2nd ARG - DOM element to append to:
+//   document.querySelector('#rockPaperScissors')
+// )
+
 render(
-  // 👉 1st ARG - React element (or React component "invoked"):
-  // <div className={className} id={id}>{altContent + 5}</div>,
-  // <div>
-  //   <Bulb on={true} color='red' size='150' />
-  //   <Bulb on={false} color='blue' size={size} />
-  //   <Bulb on={true} color='pink' size={200} />
-  // </div>,
-  // <Greet name='Ian' emphasis hate />,
-  <RockPaperScissors player='Ian' />,
-  // 👉 2nd ARG - DOM element to append to:
-  document.querySelector('#root')
+  <FamilyTree />,
+  document.querySelector('#familyTree')
 )
 
 

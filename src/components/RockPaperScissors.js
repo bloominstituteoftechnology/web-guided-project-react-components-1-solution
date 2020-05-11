@@ -80,7 +80,7 @@ export default function RockPaperScissors({ player }) {
   }
 
   return (
-    <div className='rock-paper-scissors'>
+    <div className='container'>
       <div className='player'>Welcome, {player}</div>
       <h2>Round: {rounds}</h2>
 
