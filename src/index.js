@@ -72,3 +72,13 @@ render(
   <Greet personToGreet='Petar' />,
   document.querySelector('#greet')
 )
+
+
+// 💥💥💥 TASK 2: render the FamilyTree to div#familyTree
+// FamilyTree expects no props
+// Work on the FamilyTree component
+
+
+// 💥💥💥 TASK 3: render the RockPaperScissors to div#rockPaperScissors
+// RockPaperScissors expects a 'player' prop
+// Work on the RockPaperScissors component
