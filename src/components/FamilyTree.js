@@ -1,6 +1,12 @@
+// In order to work with state,
+// we need React and the state hook from React
 import React, { useState } from 'react'
 
+
 function Family(props) {
+  // Family is the top-level component so it does not receive props
+  // Family needs some state to hold savings, as they'll change over time
+  // Family needs to render a Parent
   const [savings, setSavings] = useState(1000)
   const workForFifty = () => setSavings(savings + 50)
 
@@ -10,6 +16,10 @@ function Family(props) {
 }
 
 function Parent(props) {
+  // Parent expects some information passed through props
+  // We can optionally guard against props not being what they're supposed to
+  // This Parent should render its properties (name, etc)
+  // This Parent can render one or more Child components
   const { name, account, work } = props
 
   if (!name || !account) {
@@ -28,7 +38,9 @@ function Parent(props) {
   )
 }
 
+
 function Child(props) {
+  // A Child expects some props (name, etc)
   const { name, allowance } = props
 
   if (!name || allowance === undefined) {
@@ -42,5 +54,6 @@ function Child(props) {
     </div>
   )
 }
+
 
 export default Family
