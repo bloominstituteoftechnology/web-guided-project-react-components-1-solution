@@ -34,14 +34,12 @@ render(
 
   - Name is capitalized
   - Takes an object ("props") as its one argument
-  - We often destructure the individual props
   - Must return SOMETHING (null, empty string, elements...)
-  - React provides some built-in components (h1, div, etc)
+  - React provides some built-in components that return HTML elements (h1, div, span...)
   - Attribute names with dashes are camelCased (except data- & aria-)
   - The `class` attribute is `className`, `for` attribute is `htmlFor`
-  - We can INTERPOLATE 🔥 expressions 🔥 using curly braces
-  - We can interpolate attribute values, and content
-  - We can validate the props
+  - We can INTERPOLATE 🔥 js expressions 🔥 using curly braces
+  - We interpolate attribute values and content
 */
 function Greet(props) { // takes data => returns element
   const { personToGreet, emphasis } = props
