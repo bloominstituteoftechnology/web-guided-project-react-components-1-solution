@@ -6,7 +6,6 @@
 
 // We need the state hook
 import React, { useState } from 'react'
-import Bulb from '@ladrillo/lightbulb'
 
 // These constants could live in another module
 const weapons = ['🗿', '📜', '✂️']
@@ -89,8 +88,6 @@ export default function RockPaperScissors({ player }) {
     <div className='container'>
       <div className='player'>Welcome, {player}</div>
       <h2>Round: {rounds}</h2>
-
-      <Bulb on color={loses > wins ? 'red' : 'blue'} size={100} />
 
       <h3>won: {wins} | lost: {loses} | tied: {rounds - 1 - (wins + loses)}</h3>
       <h1 className='message'>{message}</h1>
