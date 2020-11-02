@@ -7,20 +7,24 @@
 
 ## 2- Instructor's Checklist of Things to Cover
 
-* Declaring a component.
-* Anchoring a component to the DOM with React.Render.
-* The rules of JSX.
+* Difference between React components and React elements.
+* Declaring a component using a function. Argument and return value.
+* Anchoring React elements to the DOM with `ReactDOM.render`.
+* The rules of JSX and differences with HTML.
 * A little bit of props.
-* The rules of application state.
-* How to use the state hook to keep track of app state.
-* How to use logical expressions and ternaries to render JSX conditionally.
-* Using interpolated expressions inside the JSX.
+* What qualifies as application state (data that drive the app which change over time).
+* The rules of component state in React.
+* Using component state at the top-level component to keep track of application state.
+* How to use the state hook.
+* Using interpolated expressions inside the JSX for text contents and attributes.
+* Using logical expressions and ternaries to render chunks of JSX conditionally.
+* The futility of using plain variables to keep track of state.
 
 ## 3- Demo Part I (index.js)
 
 * Demo `index.js` covering everything outlined in the comments.
 * Explain props at a high level.
-* Show the different places we can interpolate expressions in the JSX.
+* Demo all the different places we can interpolate expressions in the JSX.
 * Explain the differences between HTML elements and React elements (class vs classname...).
 * Render elements conditionally using logical expressions and ternaries.
 * At the end of this part, import `Playground.js` and use render it in the JSX.
@@ -31,6 +35,7 @@
 * Create several slices of component state explaining the state hook.
 * Interpolate the states inside the JSX.
 * Create buttons and click handlers to update state.
+* The synthetic event object.
 * Students must never keep track of state in plain variables.
 
 ## 5- Links of Interest
